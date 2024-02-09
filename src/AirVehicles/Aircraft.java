@@ -1,4 +1,4 @@
-package AirVehicles;
+package airvehicles;
 
 public class Aircraft {
     protected long id_;

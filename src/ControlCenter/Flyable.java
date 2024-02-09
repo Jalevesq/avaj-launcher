@@ -1,4 +1,4 @@
-package ControlCenter;
+package controlcenter;
 
 public interface Flyable {
 

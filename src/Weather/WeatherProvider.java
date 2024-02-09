@@ -1,4 +1,4 @@
-package Weather;
+package weather;
 
 public class WeatherProvider {
     

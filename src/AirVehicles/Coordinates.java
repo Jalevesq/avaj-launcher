@@ -1,4 +1,4 @@
-package AirVehicles;
+package airvehicles;
 
 public class Coordinates {
     private int longitude_;

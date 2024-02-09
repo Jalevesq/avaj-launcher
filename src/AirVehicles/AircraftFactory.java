@@ -1,10 +1,11 @@
-package AirVehicles;
+package airvehicles;
 
-import ControlCenter.Flyable;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
 // import ControlCenter.Flyable;
+
+import controlcenter.Flyable;
 
 public class AircraftFactory {
     private static final Map<String, BiFunction<String, Coordinates, Flyable>> aircraftRegistry = new HashMap<>();

@@ -1,6 +1,6 @@
-import AirVehicles.AircraftFactory;
-import AirVehicles.Helicopter;
-import ControlCenter.Flyable;
+import airvehicles.AircraftFactory;
+import airvehicles.Helicopter;
+import controlcenter.Flyable;
 
 public class App {
     public static void main(String[] args) throws Exception {

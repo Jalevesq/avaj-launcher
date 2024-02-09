@@ -1,7 +1,7 @@
-package AirVehicles;
+package airvehicles;
 
-import ControlCenter.Flyable;
-import ControlCenter.WeatherTower;
+import controlcenter.Flyable;
+import controlcenter.WeatherTower;
 
 public class Helicopter extends Aircraft implements Flyable{
     private WeatherTower weather;
