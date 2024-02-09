@@ -1,7 +1,6 @@
 package controlcenter;
 
 import airvehicles.Coordinates;
-import weather.WeatherProvider;
 
 public class WeatherTower {
     public String getWeather(Coordinates coordinates) {
@@ -9,6 +8,6 @@ public class WeatherTower {
     }
 
     void changeWeather() {
-
+        
     }
 }
