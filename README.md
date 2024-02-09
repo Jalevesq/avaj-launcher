@@ -1,10 +1,17 @@
-## Folder Structure
+# Avaj Launcher
 
-The workspace contains two folders by default, where:
+## Introduction
+Avaj Launcher is the first project in a series focused on Java, introducing UML class diagrams and object-oriented design patterns. This project is aimed at implementing a minimal aircraft simulation program.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Project Goals
+The main objective is to simulate various aircraft scenarios to identify bottlenecks in airport operations due to weather changes.
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## General Instructions
+- Utilize Java up to the latest LTS version.
+- Avoid external libraries, build tools, or code generators.
+- Follow Java package naming conventions for creating your packages.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+## Implementation
+- Implement the simulation based on the provided class diagram.
+- The program takes a scenario file as input and generates a simulation outcome.
+- Incorporate basic weather generation and aircraft behavior as specified.
