@@ -1,5 +1,22 @@
 package AirVehicles;
 
-public class Baloon {
-    
+import ControlCenter.Flyable;
+import ControlCenter.WeatherTower;
+
+public class Baloon extends Aircraft implements Flyable {
+    private WeatherTower weather;
+
+    Baloon(String name, Coordinates coordinates) {
+        super(name, coordinates);
+    }
+
+    @Override
+    public void updateConditions() {
+        
+    }
+
+    @Override
+    public void registerTower(WeatherTower WeatherTower) {
+        
+    }
 }

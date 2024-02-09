@@ -5,7 +5,7 @@ public class Coordinates {
     private int latitude_;
     private int height_;
 
-    public Coordinates(int longitude, int latitude, int height) {
+    Coordinates(int longitude, int latitude, int height) {
         this.height_ = height;
         this.latitude_ = latitude;
         this.longitude_ = longitude;
@@ -21,5 +21,10 @@ public class Coordinates {
 
     public int getHeight() {
         return this.height_;
+    }
+
+    @Override
+    public String toString() {
+        return "longitue: " + this.longitude_ + ", latitude: " + this.latitude_ + ", height: " + this.height_;
     }
 }

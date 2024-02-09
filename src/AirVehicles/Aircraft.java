@@ -15,4 +15,17 @@ public class Aircraft {
     private static long nextId() {
         return idCounter_++;
     }
+
+    public String getName() {
+        return this.name_;
+    }
+
+    public long getId() {
+        return this.id_;
+    }
+
+    public void printCoordinate() {
+        System.out.println(this.coordinates_);
+    }
+
 }
