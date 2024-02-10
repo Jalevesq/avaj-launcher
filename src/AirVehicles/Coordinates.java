@@ -29,6 +29,6 @@ public class Coordinates {
 
     @Override
     public String toString() {
-        return "longitue: " + this.longitude_ + ", latitude: " + this.latitude_ + ", height: " + this.height_;
+        return "longitude: " + this.longitude_ + ", latitude: " + this.latitude_ + ", height: " + this.height_;
     }
 }
