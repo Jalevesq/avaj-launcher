@@ -3,24 +3,23 @@ package controlcenter;
 import airvehicles.Coordinates;
 
 public class WeatherProvider {
-    public static WeatherProvider providerInstance = null;
-    private String weather;
+    private static WeatherProvider providerInstance_ = null;
+    private String weather_;
 
     private WeatherProvider() {
-        weather = "DEFAULT_WEATHER";
+        weather_ = "DEFAULT_WEATHER";
     }
 
-    public static WeatherProvider getInstance() {
-        if (providerInstance == null) {
-            if (providerInstance == null) {
-                providerInstance = new WeatherProvider();
+    public static WeatherProvider getProvider() {
+        if (providerInstance_ == null) {
+            if (providerInstance_ == null) {
+                providerInstance_ = new WeatherProvider();
             }
         }
-        return providerInstance;
+        return providerInstance_;
     }
 
     public String getCurrentWeather(Coordinates coordinates) {
-        return weather;
+        return weather_;
     }
-
 }

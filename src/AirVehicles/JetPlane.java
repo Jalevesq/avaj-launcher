@@ -1,13 +1,22 @@
 package airvehicles;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import controlcenter.Flyable;
 import controlcenter.WeatherTower;
 
 public class JetPlane extends Aircraft implements Flyable {
-    private WeatherTower weather;
+    private Set<WeatherTower> weatherTower_;
 
     JetPlane(String name, Coordinates coordinates) {
         super(name, coordinates);
+        this.weatherTower_ = new HashSet<>();
+    }
+
+    @Override
+    public String getFlyableInfo() {
+        return "JetPlane#" + this.getName() + "(" + this.getId() + ")";
     }
 
     @Override
@@ -16,7 +25,8 @@ public class JetPlane extends Aircraft implements Flyable {
     }
 
     @Override
-    public void registerTower(WeatherTower WeatherTower) {
-        
+    public void registerTower(WeatherTower weatherTower) {
+        this.weatherTower_.add(weatherTower);
+        weatherTower.register(this);
     }
 }

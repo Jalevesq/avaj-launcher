@@ -4,6 +4,13 @@
             "type": "java",
             "name": "App",
             "request": "launch",
+            "mainClass": "app.App",
+            "projectName": "avaj-launcher_429bc00"
+        },
+        {
+            "type": "java",
+            "name": "App",
+            "request": "launch",
             "mainClass": "App",
             "projectName": "avaj-launcher_429bc00"
         }

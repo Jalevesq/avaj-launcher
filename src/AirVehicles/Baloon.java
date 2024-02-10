@@ -1,13 +1,17 @@
 package airvehicles;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import controlcenter.Flyable;
 import controlcenter.WeatherTower;
 
 public class Baloon extends Aircraft implements Flyable {
-    private WeatherTower weather;
+    private Set<WeatherTower> weatherTower_;
 
     Baloon(String name, Coordinates coordinates) {
         super(name, coordinates);
+        this.weatherTower_ = new HashSet<>();
     }
 
     @Override
@@ -16,7 +20,13 @@ public class Baloon extends Aircraft implements Flyable {
     }
 
     @Override
-    public void registerTower(WeatherTower WeatherTower) {
-        
+    public String getFlyableInfo() {
+        return "Baloon#" + this.getName() + "(" + this.getId() + ")";
+    }
+
+    @Override
+    public void registerTower(WeatherTower weatherTower) {
+        this.weatherTower_.add(weatherTower);
+        weatherTower.register(this);
     }
 }
