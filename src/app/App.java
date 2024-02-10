@@ -12,5 +12,6 @@ public class App {
         }
 
         simulation.startSimulation();
+        System.out.println("Simulation done !");
     }
 }

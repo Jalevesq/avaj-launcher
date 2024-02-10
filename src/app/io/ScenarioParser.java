@@ -15,19 +15,21 @@ public class ScenarioParser {
 
     public ScenarioParser() {
         this.aircrafts = new ArrayList<>();
+        this.simulationCount = 0;
     }
 
     public void parseFile(String filePath) throws FileNotFoundException, IllegalArgumentException {
         Scanner scanner = new Scanner(new File(filePath));
-
+        
         try {
-            if (scanner.hasNextLine()) {
-                String firstLine = scanner.nextLine();
-                try {
-                    simulationCount = Integer.parseInt(firstLine.trim());
-                } catch (NumberFormatException e) {
-                    throw new IllegalArgumentException("The first line is not a valid integer: " + firstLine, e);
-                }
+            if (!scanner.hasNextLine()) {
+                throw new IllegalArgumentException("File is empty.");
+            }
+            String firstLine = scanner.nextLine();
+            try {
+                simulationCount = Integer.parseInt(firstLine.trim());
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("The first line is not a valid integer: " + firstLine, e);
             }
 
             while (scanner.hasNextLine()) {
@@ -52,6 +54,10 @@ public class ScenarioParser {
                 } catch (IllegalArgumentException e) {
                     throw new IllegalArgumentException(e.getMessage() + " line: " + line, e);
                 }
+            }
+
+            if (this.aircrafts.size() <= 0) {
+                throw new IllegalArgumentException("The scenario need at least one flyable.");
             }
         } finally {
             scanner.close();

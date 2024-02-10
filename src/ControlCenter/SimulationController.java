@@ -1,7 +1,7 @@
 package controlcenter;
 
 import java.util.List;
-import app.io.Logger;
+// import app.io.Logger;
 import app.io.ScenarioParser;
 import java.io.FileNotFoundException;
 
@@ -33,10 +33,10 @@ public class SimulationController {
     public void startSimulation() {
         int i = 0;
         while (i < simulationCount_) {
-            Logger.log("[Simulation " + (i + 1) + "]");
+            // Logger.log("[Simulation " + (i + 1) + "]");
             weathertower_.changeWeather();
             i++;
         }
-        Logger.log("-- Simulation Finish --");
+        // Logger.log("-- Simulation Finish --");
     }
 }
