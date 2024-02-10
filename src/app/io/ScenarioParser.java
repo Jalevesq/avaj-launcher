@@ -28,8 +28,10 @@ public class ScenarioParser {
             String firstLine = scanner.nextLine();
             try {
                 simulationCount = Integer.parseInt(firstLine.trim());
+                if (simulationCount < 0)
+                    throw new NumberFormatException();
             } catch (NumberFormatException e) {
-                throw new IllegalArgumentException("The first line is not a valid integer: " + firstLine, e);
+                throw new IllegalArgumentException("The first line is not a valid positive integer: " + firstLine, e);
             }
 
             while (scanner.hasNextLine()) {
@@ -41,24 +43,12 @@ public class ScenarioParser {
                     throw new IllegalArgumentException("Too many data line: " + line);
                 }
                 try {
-                    int longitude = Integer.parseInt(data[2]);
-                    int latitude = Integer.parseInt(data[3]);
-                    int height = Integer.parseInt(data[4]);
-                    
-                    if (longitude < 0 || latitude < 0 || height < 0) {
-                        throw new IllegalArgumentException("Coordinates and height must be positive integers: " + line);
-                    }
-            
-                    Flyable flyable = AircraftFactory.newAircraft(
-                        data[0], // type
-                        data[1], // name
-                        longitude, // longitude
-                        latitude, // latitude
-                        height  // height
-                    );
+                    Flyable flyable = this.createAircraft(data);
                     aircrafts.add(flyable);
                 } catch (NumberFormatException e) {
                     throw new IllegalArgumentException("Number format error in line: " + line, e);
+                } catch (IllegalArgumentException e) {
+                    throw new IllegalArgumentException(e.getMessage() + " line: " + line);
                 }
             }
 
@@ -68,6 +58,25 @@ public class ScenarioParser {
         } finally {
             scanner.close();
         }
+    }
+
+    private Flyable createAircraft(String[] data) {
+        int longitude = Integer.parseInt(data[2]);
+        int latitude = Integer.parseInt(data[3]);
+        int height = Integer.parseInt(data[4]);
+        
+        if (longitude < 0 || latitude < 0 || height < 0) {
+            throw new IllegalArgumentException("Coordinates and height must be positive integers.");
+        }
+
+        Flyable flyable = AircraftFactory.newAircraft(
+            data[0], // type
+            data[1], // name
+            longitude, // longitude
+            latitude, // latitude
+            height  // height
+        );
+        return flyable;
     }
 
     public int getSimulationCount() {
