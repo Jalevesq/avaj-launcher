@@ -2,9 +2,9 @@ package avaj.airvehicles;
 
 import java.util.HashMap;
 import java.util.Map;
-import app.io.Logger;
-import controlcenter.Flyable;
-import controlcenter.WeatherTower;
+import avaj.app.io.Logger;
+import avaj.controlcenter.Flyable;
+import avaj.controlcenter.WeatherTower;
 
 public class JetPlane extends Aircraft implements Flyable {
     private WeatherTower weatherTower_;

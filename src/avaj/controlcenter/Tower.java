@@ -2,7 +2,7 @@ package avaj.controlcenter;
 
 import java.util.HashSet;
 import java.util.Set;
-import app.io.Logger;
+import avaj.app.io.Logger;
 
 public class Tower {
     private Set<Flyable> observers_;

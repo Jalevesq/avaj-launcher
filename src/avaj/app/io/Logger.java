@@ -11,7 +11,7 @@ public class Logger {
 
     static {
         try {
-            outfile = new File("simulator.txt");
+            outfile = new File("simulation.txt");
             outfileWriter = new BufferedWriter(new FileWriter(outfile));
             Runtime.getRuntime().addShutdownHook(new Thread(Logger::closeLog));
         } catch (IOException e) {

@@ -2,31 +2,24 @@ package avaj.airvehicles;
 
 import java.util.HashMap;
 import java.util.Map;
-import app.io.Logger;
-import controlcenter.Flyable;
-import controlcenter.WeatherTower;
+import avaj.app.io.Logger;
+import avaj.controlcenter.Flyable;
+import avaj.controlcenter.WeatherTower;
 
-
-public class Helicopter extends Aircraft implements Flyable{
+public class Baloon extends Aircraft implements Flyable {
     private WeatherTower weatherTower_;
-    private static Map<String, String> helicopterInfo_ = new HashMap<>();
+    private static Map<String, String> baloonInfo_ = new HashMap<>();
 
     static {
-        helicopterInfo_.put("FOG", "Flying blind in pea soup! Where's my foghorn?");
-        helicopterInfo_.put("RAIN", "It's a spa day! Free sky showers for everyone aboard.");
-        helicopterInfo_.put("SUN", "Shades on, rotors spinning. It's beach patrol time!");
-        helicopterInfo_.put("SNOW", "Who ordered the sky confetti? Watch out for the whiteout party.");        
+        baloonInfo_.put("FOG", "Who turned the world grayscale? Oh, it's just the fog.");
+        baloonInfo_.put("RAIN", "Great, now I'm floating in a giant outdoor shower.");
+        baloonInfo_.put("SUN", "Sun's out, buns out! Let's catch some rays and float away.");
+        baloonInfo_.put("SNOW", "It's a winter wonderland up here. Too bad I can't make snow angels.");
     }
 
-
-    Helicopter(String name, Coordinates coordinates) {
+    public Baloon(String name, Coordinates coordinates) {
         super(name, coordinates);
-        this.type_ = "Helicopter";
-    }
-
-    @Override
-    public String getFlyableInfo() {
-        return this.type_ + "#" + this.name_ + "(" + this.id_ + ")";
+        this.type_ = "Baloon";
     }
 
     @Override
@@ -34,40 +27,38 @@ public class Helicopter extends Aircraft implements Flyable{
         String currentWeather = weatherTower_.getWeather(this.coordinates_);
         switch (currentWeather) {
             case "FOG":
-                int longitudeFog = safeAdd(this.coordinates_.getLongitude(), 1);
                 this.coordinates_ = new Coordinates(
-                    longitudeFog,
+                    this.coordinates_.getLongitude(),
                     this.coordinates_.getLatitude(),
-                    this.coordinates_.getHeight()
+                    this.coordinates_.getHeight() - 3
                 );
                 break;
             case "RAIN":
-                int longitudeRain = safeAdd(this.coordinates_.getLongitude(), 5);
                 this.coordinates_ = new Coordinates(
-                    longitudeRain,
+                    this.coordinates_.getLongitude(),
                     this.coordinates_.getLatitude(),
-                    this.coordinates_.getHeight()
+                    this.coordinates_.getHeight() - 5
                 );
                 break;
             case "SUN":
-                int longitudeSun = safeAdd(this.coordinates_.getLongitude(), 10);
+                int longitude = safeAdd(this.coordinates_.getLongitude(), 2);
                 this.coordinates_ = new Coordinates(
-                    longitudeSun,
+                    longitude,
                     this.coordinates_.getLatitude(),
-                    this.coordinates_.getHeight() + 2
+                    this.coordinates_.getHeight() + 4
                 );
                 break;
             case "SNOW":
                 this.coordinates_ = new Coordinates(
                     this.coordinates_.getLongitude(),
                     this.coordinates_.getLatitude(),
-                    this.coordinates_.getHeight() - 12
+                    this.coordinates_.getHeight() - 15
                 );
                 break;
         }
 
-        if (helicopterInfo_.containsKey(currentWeather)) {
-            Logger.log(getFlyableInfo() + ": " + helicopterInfo_.get(currentWeather));
+        if (baloonInfo_.containsKey(currentWeather)) {
+            Logger.log(getFlyableInfo() + ": " + baloonInfo_.get(currentWeather));
         }
 
         if (this.coordinates_.getHeight() <= 0) {
@@ -75,6 +66,11 @@ public class Helicopter extends Aircraft implements Flyable{
             this.weatherTower_.unregister(this);
             this.weatherTower_ = null;
         }
+    }
+
+    @Override
+    public String getFlyableInfo() {
+        return this.type_ + "#" + this.name_ + "(" + this.id_ + ")";
     }
 
     @Override

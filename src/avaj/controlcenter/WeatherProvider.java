@@ -1,6 +1,6 @@
 package avaj.controlcenter;
 
-import airvehicles.Coordinates;
+import avaj.airvehicles.Coordinates;
 
 public class WeatherProvider {
     private static WeatherProvider providerInstance_ = null;

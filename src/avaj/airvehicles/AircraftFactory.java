@@ -3,13 +3,12 @@ package avaj.airvehicles;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.function.BiFunction;
-import controlcenter.Flyable;
-// import ControlCenter.Flyable;
+import avaj.controlcenter.Flyable;
 
 
 public class AircraftFactory {
     private static final Map<String, BiFunction<String, Coordinates, Flyable>> aircraftRegistry = new HashMap<>();
-
+    
     static {
         registerAircraftType("Baloon", Baloon::new);
         registerAircraftType("Helicopter", Helicopter::new);

@@ -1,5 +1,5 @@
 package avaj.app;
-import controlcenter.SimulationController;
+import avaj.controlcenter.SimulationController;
 
 public class App {
     public static void main(String[] args) throws Exception {

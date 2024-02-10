@@ -5,8 +5,8 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import airvehicles.AircraftFactory;
-import controlcenter.Flyable;
+import avaj.airvehicles.AircraftFactory;
+import avaj.controlcenter.Flyable;
 
 public class ScenarioParser {
 
