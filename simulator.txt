@@ -1,2 +1,5 @@
-Tower says: Baloon#test(1) registered to weather tower.
-Baloon#test(1): Who turned the world grayscale? Oh, it's just the fog.
+Tower says: Helicopter#test(1) registered to weather tower.
+Helicopter#test(1): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#test(1): Flying blind in pea soup! Where's my foghorn?
+Helicopter#test(1): Shades on, rotors spinning. It's beach patrol time!
+Helicopter#test(1): Flying blind in pea soup! Where's my foghorn?

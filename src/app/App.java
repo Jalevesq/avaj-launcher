@@ -11,11 +11,15 @@ public class App {
         // Height can't be higher than 100.
         // First number = number of time to run simulation.
         // Respect form: TYPE NAME LONGITUDE LATITUDE HEIGHT
-        Flyable somethingIsFlying = AircraftFactory.newAircraft("Baloon", "test", 50, 50, 49);
+        Flyable somethingIsFlying = AircraftFactory.newAircraft("Helicopter", "test", 50, 50, 49);
         
         WeatherTower weatherTower = new WeatherTower();
         somethingIsFlying.registerTower(weatherTower);
 
         weatherTower.conditionsChanged();
+        weatherTower.conditionsChanged();
+        weatherTower.conditionsChanged();
+        weatherTower.conditionsChanged();
+
     }
 }

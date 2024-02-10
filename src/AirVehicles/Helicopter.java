@@ -1,10 +1,23 @@
 package airvehicles;
 
+import java.util.HashMap;
+import java.util.Map;
+import app.simulation.Logger;
 import controlcenter.Flyable;
 import controlcenter.WeatherTower;
 
+
 public class Helicopter extends Aircraft implements Flyable{
     private WeatherTower weatherTower_;
+    private static Map<String, String> helicopterInfo_ = new HashMap<>();
+
+    static {
+        helicopterInfo_.put("FOG", "Flying blind in pea soup! Where's my foghorn?");
+        helicopterInfo_.put("RAIN", "It's a spa day! Free sky showers for everyone aboard.");
+        helicopterInfo_.put("SUN", "Shades on, rotors spinning. It's beach patrol time!");
+        helicopterInfo_.put("SNOW", "Who ordered the sky confetti? Watch out for the whiteout party.");        
+    }
+
 
     Helicopter(String name, Coordinates coordinates) {
         super(name, coordinates);
@@ -19,37 +32,44 @@ public class Helicopter extends Aircraft implements Flyable{
     @Override
     public void updateConditions() {
         String currentWeather = weatherTower_.getWeather(this.coordinates_);
-        System.out.println(currentWeather);
-        if (currentWeather == "FOG") {
-            this.coordinates_ = new Coordinates(
-                this.coordinates_.getLongitude() + 1,
-                this.coordinates_.getLatitude(),
-                this.coordinates_.getHeight()
-            );
-        } else if (currentWeather == "RAIN") {
-            this.coordinates_ = new Coordinates(
-                this.coordinates_.getLongitude() + 5,
-                this.coordinates_.getLatitude(),
-                this.coordinates_.getHeight()
-            );
-        } else if (currentWeather == "SUN") {
-            this.coordinates_ = new Coordinates(
-                this.coordinates_.getLongitude() + 10,
-                this.coordinates_.getLatitude(),
-                this.coordinates_.getHeight() + 2
-            );
-        } else if (currentWeather == "SNOW") {
-            this.coordinates_ = new Coordinates(
-                this.coordinates_.getLongitude(),
-                this.coordinates_.getLatitude(),
-                this.coordinates_.getHeight() - 12
-            );
+        switch (currentWeather) {
+            case "FOG":
+                this.coordinates_ = new Coordinates(
+                    this.coordinates_.getLongitude() + 1,
+                    this.coordinates_.getLatitude(),
+                    this.coordinates_.getHeight()
+                );
+                break;
+            case "RAIN":
+                this.coordinates_ = new Coordinates(
+                    this.coordinates_.getLongitude() + 5,
+                    this.coordinates_.getLatitude(),
+                    this.coordinates_.getHeight()
+                );
+                break;
+            case "SUN":
+                this.coordinates_ = new Coordinates(
+                    this.coordinates_.getLongitude() + 10,
+                    this.coordinates_.getLatitude(),
+                    this.coordinates_.getHeight() + 2
+                );
+                break;
+            case "SNOW":
+                this.coordinates_ = new Coordinates(
+                    this.coordinates_.getLongitude(),
+                    this.coordinates_.getLatitude(),
+                    this.coordinates_.getHeight() - 12
+                );
+                break;
         }
-        // Create logger
+
+        if (helicopterInfo_.containsKey(currentWeather)) {
+            Logger.log(getFlyableInfo() + ": " + helicopterInfo_.get(currentWeather));
+        }
 
         if (this.coordinates_.getHeight() <= 0) {
-            System.out.println(getFlyableInfo() + " landing.");
-            weatherTower_.unregister(this);
+            Logger.log(getFlyableInfo() + " landing.");
+            this.weatherTower_.unregister(this);
         }
     }
 

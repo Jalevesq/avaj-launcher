@@ -8,13 +8,13 @@ import controlcenter.WeatherTower;
 
 public class Baloon extends Aircraft implements Flyable {
     private WeatherTower weatherTower_;
-    private static Map<String, String> baloonInfo = new HashMap<>();
+    private static Map<String, String> baloonInfo_ = new HashMap<>();
 
     static {
-        baloonInfo.put("FOG", "Who turned the world grayscale? Oh, it's just the fog.");
-        baloonInfo.put("RAIN", "Great, now I'm floating in a giant outdoor shower.");
-        baloonInfo.put("SUN", "Sun's out, buns out! Let's catch some rays and float away.");
-        baloonInfo.put("SNOW", "It's a winter wonderland up here. Too bad I can't make snow angels.");
+        baloonInfo_.put("FOG", "Who turned the world grayscale? Oh, it's just the fog.");
+        baloonInfo_.put("RAIN", "Great, now I'm floating in a giant outdoor shower.");
+        baloonInfo_.put("SUN", "Sun's out, buns out! Let's catch some rays and float away.");
+        baloonInfo_.put("SNOW", "It's a winter wonderland up here. Too bad I can't make snow angels.");
     }
 
     public Baloon(String name, Coordinates coordinates) {
@@ -56,8 +56,8 @@ public class Baloon extends Aircraft implements Flyable {
                 break;
         }
 
-        if (baloonInfo.containsKey(currentWeather)) {
-            Logger.log(getFlyableInfo() + ": " + baloonInfo.get(currentWeather));
+        if (baloonInfo_.containsKey(currentWeather)) {
+            Logger.log(getFlyableInfo() + ": " + baloonInfo_.get(currentWeather));
         }
 
         if (this.coordinates_.getHeight() <= 0) {
