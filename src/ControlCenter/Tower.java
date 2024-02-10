@@ -2,7 +2,6 @@ package controlcenter;
 
 import java.util.HashSet;
 import java.util.Set;
-
 import app.io.Logger;
 
 public class Tower {
@@ -23,7 +22,8 @@ public class Tower {
     }
 
     public void conditionsChanged() {
-        for (Flyable flyable : observers_) {
+        Set<Flyable> observersCopy = new HashSet<>(observers_);
+        for (Flyable flyable : observersCopy) {
             flyable.updateConditions();
         }
     }

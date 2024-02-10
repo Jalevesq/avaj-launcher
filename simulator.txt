@@ -7,29 +7,323 @@ Tower says: Helicopter#H3(6) registered to weather tower.
 Tower says: Baloon#B3(7) registered to weather tower.
 Tower says: JetPlane#J2(8) registered to weather tower.
 Tower says: Helicopter#H4(9) registered to weather tower.
-[Simulation 0]
-Baloon#B1(1): Who turned the world grayscale? Oh, it's just the fog.
-Baloon#B2(2): Great, now I'm floating in a giant outdoor shower.
-Helicopter#H1(4): Who ordered the sky confetti? Watch out for the whiteout party.
-Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
-JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
-JetPlane#J1(3): Looks like we're flying through a giant snow globe. Mind the snowmen!
-Baloon#B3(7): It's a winter wonderland up here. Too bad I can't make snow angels.
-Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
-Helicopter#H4(9): It's a spa day! Free sky showers for everyone aboard.
 [Simulation 1]
-Baloon#B1(1): Who turned the world grayscale? Oh, it's just the fog.
+Baloon#B1(1): Sun's out, buns out! Let's catch some rays and float away.
 Baloon#B2(2): Great, now I'm floating in a giant outdoor shower.
-Helicopter#H1(4): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H1(4): Shades on, rotors spinning. It's beach patrol time!
 Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
 JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
 JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
-Baloon#B3(7): Who turned the world grayscale? Oh, it's just the fog.
-Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
+Baloon#B3(7): Sun's out, buns out! Let's catch some rays and float away.
+Helicopter#H2(5): Shades on, rotors spinning. It's beach patrol time!
 Helicopter#H4(9): Shades on, rotors spinning. It's beach patrol time!
 [Simulation 2]
-Baloon#B1(1): Great, now I'm floating in a giant outdoor shower.
+Baloon#B1(1): Sun's out, buns out! Let's catch some rays and float away.
 Baloon#B2(2): Who turned the world grayscale? Oh, it's just the fog.
+Helicopter#H1(4): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H3(6): It's a spa day! Free sky showers for everyone aboard.
+JetPlane#J2(8): Turbo wipers on! Let's slice through this wet blanket.
+JetPlane#J1(3): Perfect weather for a loop-de-loop. Don't spill your coffee!
+Baloon#B3(7): It's a winter wonderland up here. Too bad I can't make snow angels.
+Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H4(9): It's a spa day! Free sky showers for everyone aboard.
+[Simulation 3]
+Baloon#B1(1): Great, now I'm floating in a giant outdoor shower.
+Baloon#B2(2): Great, now I'm floating in a giant outdoor shower.
+Helicopter#H1(4): Shades on, rotors spinning. It's beach patrol time!
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
+Baloon#B3(7): Who turned the world grayscale? Oh, it's just the fog.
+Helicopter#H2(5): It's a spa day! Free sky showers for everyone aboard.
+Helicopter#H4(9): Flying blind in pea soup! Where's my foghorn?
+[Simulation 4]
+Baloon#B1(1): It's a winter wonderland up here. Too bad I can't make snow angels.
+Baloon#B2(2): Who turned the world grayscale? Oh, it's just the fog.
+Helicopter#H1(4): It's a spa day! Free sky showers for everyone aboard.
+Helicopter#H3(6): Who ordered the sky confetti? Watch out for the whiteout party.
+JetPlane#J2(8): Turbo wipers on! Let's slice through this wet blanket.
+JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
+Baloon#B3(7): It's a winter wonderland up here. Too bad I can't make snow angels.
+Helicopter#H2(5): Shades on, rotors spinning. It's beach patrol time!
+Helicopter#H4(9): It's a spa day! Free sky showers for everyone aboard.
+[Simulation 5]
+Baloon#B1(1): Great, now I'm floating in a giant outdoor shower.
+Baloon#B2(2): Sun's out, buns out! Let's catch some rays and float away.
+Helicopter#H1(4): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Turbo wipers on! Let's slice through this wet blanket.
+Baloon#B3(7): Great, now I'm floating in a giant outdoor shower.
+Baloon#B3(7) landing.
+Tower says: Baloon#B3(7) unregistered to weather tower.
+Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H4(9): Flying blind in pea soup! Where's my foghorn?
+[Simulation 6]
+Baloon#B1(1): Great, now I'm floating in a giant outdoor shower.
+Baloon#B1(1) landing.
+Tower says: Baloon#B1(1) unregistered to weather tower.
+Baloon#B2(2): Sun's out, buns out! Let's catch some rays and float away.
 Helicopter#H1(4): Who ordered the sky confetti? Watch out for the whiteout party.
 Helicopter#H1(4) landing.
 Tower says: Helicopter#H1(4) unregistered to weather tower.
+Helicopter#H3(6): Who ordered the sky confetti? Watch out for the whiteout party.
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
+Helicopter#H2(5): Shades on, rotors spinning. It's beach patrol time!
+Helicopter#H4(9): Who ordered the sky confetti? Watch out for the whiteout party.
+[Simulation 7]
+Baloon#B2(2): Great, now I'm floating in a giant outdoor shower.
+Helicopter#H3(6): Who ordered the sky confetti? Watch out for the whiteout party.
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
+Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H4(9): Flying blind in pea soup! Where's my foghorn?
+[Simulation 8]
+Baloon#B2(2): Who turned the world grayscale? Oh, it's just the fog.
+Helicopter#H3(6): Flying blind in pea soup! Where's my foghorn?
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Looks like we're flying through a giant snow globe. Mind the snowmen!
+Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H4(9): Shades on, rotors spinning. It's beach patrol time!
+[Simulation 9]
+Baloon#B2(2): Who turned the world grayscale? Oh, it's just the fog.
+Helicopter#H3(6): It's a spa day! Free sky showers for everyone aboard.
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+JetPlane#J1(3): Perfect weather for a loop-de-loop. Don't spill your coffee!
+Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H4(9): Flying blind in pea soup! Where's my foghorn?
+[Simulation 10]
+Baloon#B2(2): Sun's out, buns out! Let's catch some rays and float away.
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+JetPlane#J1(3): Perfect weather for a loop-de-loop. Don't spill your coffee!
+Helicopter#H2(5): Shades on, rotors spinning. It's beach patrol time!
+Helicopter#H4(9): Who ordered the sky confetti? Watch out for the whiteout party.
+[Simulation 11]
+Baloon#B2(2): Great, now I'm floating in a giant outdoor shower.
+Helicopter#H3(6): Flying blind in pea soup! Where's my foghorn?
+JetPlane#J2(8): Turbo wipers on! Let's slice through this wet blanket.
+JetPlane#J1(3): Looks like we're flying through a giant snow globe. Mind the snowmen!
+Helicopter#H2(5): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#H4(9): Who ordered the sky confetti? Watch out for the whiteout party.
+[Simulation 12]
+Baloon#B2(2): Great, now I'm floating in a giant outdoor shower.
+Helicopter#H3(6): It's a spa day! Free sky showers for everyone aboard.
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+JetPlane#J1(3): Looks like we're flying through a giant snow globe. Mind the snowmen!
+Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H4(9): Flying blind in pea soup! Where's my foghorn?
+[Simulation 13]
+Baloon#B2(2): Great, now I'm floating in a giant outdoor shower.
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+JetPlane#J1(3): Perfect weather for a loop-de-loop. Don't spill your coffee!
+Helicopter#H2(5): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#H4(9): Shades on, rotors spinning. It's beach patrol time!
+[Simulation 14]
+Baloon#B2(2): Who turned the world grayscale? Oh, it's just the fog.
+Helicopter#H3(6): Who ordered the sky confetti? Watch out for the whiteout party.
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+JetPlane#J1(3): Looks like we're flying through a giant snow globe. Mind the snowmen!
+Helicopter#H2(5): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#H4(9): Shades on, rotors spinning. It's beach patrol time!
+[Simulation 15]
+Baloon#B2(2): It's a winter wonderland up here. Too bad I can't make snow angels.
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Turbo wipers on! Let's slice through this wet blanket.
+Helicopter#H2(5): Shades on, rotors spinning. It's beach patrol time!
+Helicopter#H4(9): Who ordered the sky confetti? Watch out for the whiteout party.
+[Simulation 16]
+Baloon#B2(2): It's a winter wonderland up here. Too bad I can't make snow angels.
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Turbo wipers on! Let's slice through this wet blanket.
+JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
+Helicopter#H2(5): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#H4(9): Flying blind in pea soup! Where's my foghorn?
+[Simulation 17]
+Baloon#B2(2): Sun's out, buns out! Let's catch some rays and float away.
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+JetPlane#J1(3): Perfect weather for a loop-de-loop. Don't spill your coffee!
+Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H4(9): Who ordered the sky confetti? Watch out for the whiteout party.
+[Simulation 18]
+Baloon#B2(2): It's a winter wonderland up here. Too bad I can't make snow angels.
+Baloon#B2(2) landing.
+Tower says: Baloon#B2(2) unregistered to weather tower.
+Helicopter#H3(6): Who ordered the sky confetti? Watch out for the whiteout party.
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+JetPlane#J1(3): Turbo wipers on! Let's slice through this wet blanket.
+Helicopter#H2(5): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#H2(5) landing.
+Tower says: Helicopter#H2(5) unregistered to weather tower.
+Helicopter#H4(9): It's a spa day! Free sky showers for everyone aboard.
+[Simulation 19]
+Helicopter#H3(6): It's a spa day! Free sky showers for everyone aboard.
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
+Helicopter#H4(9): Shades on, rotors spinning. It's beach patrol time!
+[Simulation 20]
+Helicopter#H3(6): Flying blind in pea soup! Where's my foghorn?
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+JetPlane#J1(3): Looks like we're flying through a giant snow globe. Mind the snowmen!
+Helicopter#H4(9): Flying blind in pea soup! Where's my foghorn?
+[Simulation 21]
+Helicopter#H3(6): Flying blind in pea soup! Where's my foghorn?
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Turbo wipers on! Let's slice through this wet blanket.
+Helicopter#H4(9): It's a spa day! Free sky showers for everyone aboard.
+[Simulation 22]
+Helicopter#H3(6): It's a spa day! Free sky showers for everyone aboard.
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+JetPlane#J1(3): Perfect weather for a loop-de-loop. Don't spill your coffee!
+Helicopter#H4(9): Flying blind in pea soup! Where's my foghorn?
+[Simulation 23]
+Helicopter#H3(6): Flying blind in pea soup! Where's my foghorn?
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Perfect weather for a loop-de-loop. Don't spill your coffee!
+Helicopter#H4(9): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#H4(9) landing.
+Tower says: Helicopter#H4(9) unregistered to weather tower.
+[Simulation 24]
+Helicopter#H3(6): Who ordered the sky confetti? Watch out for the whiteout party.
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+JetPlane#J1(3): Looks like we're flying through a giant snow globe. Mind the snowmen!
+[Simulation 25]
+Helicopter#H3(6): It's a spa day! Free sky showers for everyone aboard.
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Turbo wipers on! Let's slice through this wet blanket.
+[Simulation 26]
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
+[Simulation 27]
+Helicopter#H3(6): Who ordered the sky confetti? Watch out for the whiteout party.
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
+[Simulation 28]
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
+[Simulation 29]
+Helicopter#H3(6): Who ordered the sky confetti? Watch out for the whiteout party.
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Turbo wipers on! Let's slice through this wet blanket.
+[Simulation 30]
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+JetPlane#J1(3): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3) landing.
+Tower says: JetPlane#J1(3) unregistered to weather tower.
+[Simulation 31]
+Helicopter#H3(6): It's a spa day! Free sky showers for everyone aboard.
+JetPlane#J2(8): Turbo wipers on! Let's slice through this wet blanket.
+[Simulation 32]
+Helicopter#H3(6): Who ordered the sky confetti? Watch out for the whiteout party.
+JetPlane#J2(8): Turbo wipers on! Let's slice through this wet blanket.
+[Simulation 33]
+Helicopter#H3(6): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#H3(6) landing.
+Tower says: Helicopter#H3(6) unregistered to weather tower.
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+[Simulation 34]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 35]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 36]
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+[Simulation 37]
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+[Simulation 38]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 39]
+JetPlane#J2(8): Turbo wipers on! Let's slice through this wet blanket.
+[Simulation 40]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 41]
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+[Simulation 42]
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+[Simulation 43]
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+[Simulation 44]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 45]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 46]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 47]
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+[Simulation 48]
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+[Simulation 49]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 50]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 51]
+JetPlane#J2(8): Turbo wipers on! Let's slice through this wet blanket.
+[Simulation 52]
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+[Simulation 53]
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+[Simulation 54]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 55]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 56]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 57]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 58]
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+[Simulation 59]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 60]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 61]
+JetPlane#J2(8): Hope you like mystery tours, because I can't see a thing!
+[Simulation 62]
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J2(8) landing.
+Tower says: JetPlane#J2(8) unregistered to weather tower.
+[Simulation 63]
+[Simulation 64]
+[Simulation 65]
+[Simulation 66]
+[Simulation 67]
+[Simulation 68]
+[Simulation 69]
+[Simulation 70]
+[Simulation 71]
+[Simulation 72]
+[Simulation 73]
+[Simulation 74]
+[Simulation 75]
+[Simulation 76]
+[Simulation 77]
+[Simulation 78]
+[Simulation 79]
+[Simulation 80]
+[Simulation 81]
+[Simulation 82]
+[Simulation 83]
+[Simulation 84]
+[Simulation 85]
+[Simulation 86]
+[Simulation 87]
+[Simulation 88]
+[Simulation 89]
+[Simulation 90]
+[Simulation 91]
+[Simulation 92]
+[Simulation 93]
+[Simulation 94]
+[Simulation 95]
+[Simulation 96]
+[Simulation 97]
+[Simulation 98]
+[Simulation 99]
+[Simulation 100]
+-- Simulation Finish --
