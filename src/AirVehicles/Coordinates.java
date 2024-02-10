@@ -6,6 +6,10 @@ public class Coordinates {
     private int height_;
 
     Coordinates(int longitude, int latitude, int height) {
+        if (height > 100)
+            height = 100;
+        if (height < 0)
+            height = 0;
         this.height_ = height;
         this.latitude_ = latitude;
         this.longitude_ = longitude;
