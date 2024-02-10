@@ -3,6 +3,8 @@ package controlcenter;
 import java.util.HashSet;
 import java.util.Set;
 
+import app.simulation.Logger;
+
 public class Tower {
     private Set<Flyable> observers_;
 
@@ -12,16 +14,15 @@ public class Tower {
 
     public void register(Flyable flyable) {
         observers_.add(flyable);
-        System.out.println("Tower says: " + flyable.getFlyableInfo() + "registered to weather tower.");
+        Logger.log("Tower says: " + flyable.getFlyableInfo() + " registered to weather tower.");
     }
 
     public void unregister(Flyable flyable) {
         observers_.remove(flyable);
-        System.out.println("Tower says: " + flyable.getFlyableInfo() + "unregistered to weather tower.");
+        Logger.log("Tower says: " + flyable.getFlyableInfo() + " unregistered to weather tower.");
     }
 
     public void conditionsChanged() {
-        // Iterate through observer and update all of them so they do getWeather() ?
         for (Flyable flyable : observers_) {
             flyable.updateConditions();
         }

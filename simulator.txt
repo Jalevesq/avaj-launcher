@@ -1,0 +1,2 @@
+Tower says: Baloon#test(1) registered to weather tower.
+Baloon#test(1): Who turned the world grayscale? Oh, it's just the fog.
