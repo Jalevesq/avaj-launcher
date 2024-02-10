@@ -11,6 +11,7 @@ public class Aircraft {
         this.name_ = name;
         this.coordinates_ = coordinates;
         this.id_ = nextId();
+        this.type_ = "DEFAULT_TYPE";
     }
 
     private static long nextId() {
