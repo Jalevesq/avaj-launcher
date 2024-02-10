@@ -1,4 +1,4 @@
-package airvehicles;
+package avaj.airvehicles;
 
 import java.util.HashMap;
 import java.util.Map;

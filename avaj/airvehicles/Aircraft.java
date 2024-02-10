@@ -1,4 +1,4 @@
-package airvehicles;
+package avaj.airvehicles;
 
 public class Aircraft {
     protected long id_;

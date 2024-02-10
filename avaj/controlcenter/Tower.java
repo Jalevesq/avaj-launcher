@@ -1,4 +1,4 @@
-package controlcenter;
+package avaj.controlcenter;
 
 import java.util.HashSet;
 import java.util.Set;

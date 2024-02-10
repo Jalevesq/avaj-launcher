@@ -1,4 +1,4 @@
-package controlcenter;
+package avaj.controlcenter;
 
 public interface Flyable {
 
