@@ -2,7 +2,7 @@ package airvehicles;
 
 import java.util.HashMap;
 import java.util.Map;
-import app.simulation.Logger;
+import app.io.Logger;
 import controlcenter.Flyable;
 import controlcenter.WeatherTower;
 
@@ -70,6 +70,7 @@ public class JetPlane extends Aircraft implements Flyable {
             if (this.coordinates_.getHeight() <= 0) {
                 Logger.log(getFlyableInfo() + " landing.");
                 this.weatherTower_.unregister(this);
+                this.weatherTower_ = null;
             }
         }
 

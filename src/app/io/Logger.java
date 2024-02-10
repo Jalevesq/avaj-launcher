@@ -1,4 +1,4 @@
-package app.simulation;
+package app.io;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -16,7 +16,7 @@ public class Logger {
             Runtime.getRuntime().addShutdownHook(new Thread(Logger::closeLog));
         } catch (IOException e) {
             System.err.println("Error: Couldn't create simulation file.");
-            System.exit(0);
+            System.exit(1);
         }
     }
 
@@ -27,7 +27,7 @@ public class Logger {
             outfileWriter.flush();
         } catch (IOException e) {
             System.err.println("Error: Couldn't write line in file: " + msg);
-            System.exit(0);
+            System.exit(1);
         }
     }
 
@@ -37,7 +37,7 @@ public class Logger {
                 outfileWriter.close();
             } catch (IOException e) {
                 System.err.println("Error: Couldn't close file correctly.");
-                System.exit(0);
+                System.exit(1);
             }
         }
     }

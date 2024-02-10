@@ -2,7 +2,7 @@ package airvehicles;
 
 import java.util.HashMap;
 import java.util.Map;
-import app.simulation.Logger;
+import app.io.Logger;
 import controlcenter.Flyable;
 import controlcenter.WeatherTower;
 
@@ -61,9 +61,9 @@ public class Baloon extends Aircraft implements Flyable {
         }
 
         if (this.coordinates_.getHeight() <= 0) {
-            System.out.println(getFlyableInfo() + " landing.");
+            Logger.log(getFlyableInfo() + " landing.");
             this.weatherTower_.unregister(this);
-            Logger.log(getFlyableInfo() + " unregistered from weather tower.");
+            this.weatherTower_ = null;
         }
     }
 
@@ -74,6 +74,9 @@ public class Baloon extends Aircraft implements Flyable {
 
     @Override
     public void registerTower(WeatherTower weatherTower) {
+        if (this.weatherTower_ != null) {
+            this.weatherTower_.unregister(this);
+        }
         this.weatherTower_ = weatherTower;
         weatherTower.register(this);
     }

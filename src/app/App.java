@@ -1,25 +1,16 @@
 package app;
-import airvehicles.AircraftFactory;
-import controlcenter.Flyable;
-import controlcenter.WeatherTower;
+import controlcenter.SimulationController;
 
 public class App {
     public static void main(String[] args) throws Exception {
+        SimulationController simulation = null;
+        try {
+            simulation = new SimulationController("scenario.txt");
+        } catch (IllegalArgumentException e) {
+            System.err.println("Error parsing file: " + e.getMessage());
+            System.exit(1);
+        }
 
-        // Parsing file:
-        // Check that all number are positive.
-        // Height can't be higher than 100.
-        // First number = number of time to run simulation.
-        // Respect form: TYPE NAME LONGITUDE LATITUDE HEIGHT
-        Flyable somethingIsFlying = AircraftFactory.newAircraft("Helicopter", "test", 50, 50, 49);
-        
-        WeatherTower weatherTower = new WeatherTower();
-        somethingIsFlying.registerTower(weatherTower);
-
-        weatherTower.conditionsChanged();
-        weatherTower.conditionsChanged();
-        weatherTower.conditionsChanged();
-        weatherTower.conditionsChanged();
-
+        simulation.startSimulation();
     }
 }

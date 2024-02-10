@@ -2,7 +2,7 @@ package airvehicles;
 
 import java.util.HashMap;
 import java.util.Map;
-import app.simulation.Logger;
+import app.io.Logger;
 import controlcenter.Flyable;
 import controlcenter.WeatherTower;
 
@@ -70,11 +70,15 @@ public class Helicopter extends Aircraft implements Flyable{
         if (this.coordinates_.getHeight() <= 0) {
             Logger.log(getFlyableInfo() + " landing.");
             this.weatherTower_.unregister(this);
+            this.weatherTower_ = null;
         }
     }
 
     @Override
     public void registerTower(WeatherTower weatherTower) {
+        if (this.weatherTower_ != null) {
+            this.weatherTower_.unregister(this);
+        }
         this.weatherTower_ = weatherTower;
         weatherTower.register(this);
     }

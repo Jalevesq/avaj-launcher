@@ -1,5 +1,35 @@
-Tower says: Helicopter#test(1) registered to weather tower.
-Helicopter#test(1): Who ordered the sky confetti? Watch out for the whiteout party.
-Helicopter#test(1): Flying blind in pea soup! Where's my foghorn?
-Helicopter#test(1): Shades on, rotors spinning. It's beach patrol time!
-Helicopter#test(1): Flying blind in pea soup! Where's my foghorn?
+Tower says: Baloon#B1(1) registered to weather tower.
+Tower says: Baloon#B2(2) registered to weather tower.
+Tower says: JetPlane#J1(3) registered to weather tower.
+Tower says: Helicopter#H1(4) registered to weather tower.
+Tower says: Helicopter#H2(5) registered to weather tower.
+Tower says: Helicopter#H3(6) registered to weather tower.
+Tower says: Baloon#B3(7) registered to weather tower.
+Tower says: JetPlane#J2(8) registered to weather tower.
+Tower says: Helicopter#H4(9) registered to weather tower.
+[Simulation 0]
+Baloon#B1(1): Who turned the world grayscale? Oh, it's just the fog.
+Baloon#B2(2): Great, now I'm floating in a giant outdoor shower.
+Helicopter#H1(4): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Perfect weather for a loop-de-loop. Don't spill your coffee!
+JetPlane#J1(3): Looks like we're flying through a giant snow globe. Mind the snowmen!
+Baloon#B3(7): It's a winter wonderland up here. Too bad I can't make snow angels.
+Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H4(9): It's a spa day! Free sky showers for everyone aboard.
+[Simulation 1]
+Baloon#B1(1): Who turned the world grayscale? Oh, it's just the fog.
+Baloon#B2(2): Great, now I'm floating in a giant outdoor shower.
+Helicopter#H1(4): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H3(6): Shades on, rotors spinning. It's beach patrol time!
+JetPlane#J2(8): Looks like we're flying through a giant snow globe. Mind the snowmen!
+JetPlane#J1(3): Hope you like mystery tours, because I can't see a thing!
+Baloon#B3(7): Who turned the world grayscale? Oh, it's just the fog.
+Helicopter#H2(5): Flying blind in pea soup! Where's my foghorn?
+Helicopter#H4(9): Shades on, rotors spinning. It's beach patrol time!
+[Simulation 2]
+Baloon#B1(1): Great, now I'm floating in a giant outdoor shower.
+Baloon#B2(2): Who turned the world grayscale? Oh, it's just the fog.
+Helicopter#H1(4): Who ordered the sky confetti? Watch out for the whiteout party.
+Helicopter#H1(4) landing.
+Tower says: Helicopter#H1(4) unregistered to weather tower.

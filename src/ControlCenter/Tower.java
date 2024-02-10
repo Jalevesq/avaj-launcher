@@ -3,7 +3,7 @@ package controlcenter;
 import java.util.HashSet;
 import java.util.Set;
 
-import app.simulation.Logger;
+import app.io.Logger;
 
 public class Tower {
     private Set<Flyable> observers_;
