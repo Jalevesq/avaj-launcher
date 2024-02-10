@@ -33,23 +33,26 @@ public class JetPlane extends Aircraft implements Flyable {
         String currentWeather = weatherTower_.getWeather(this.coordinates_);
         switch (currentWeather) {
             case "FOG":
+                int latitudeFog = safeAdd(this.coordinates_.getLatitude(), 1);
                 this.coordinates_ = new Coordinates(
                     this.coordinates_.getLongitude(),
-                    this.coordinates_.getLatitude() + 1,
+                    latitudeFog,
                     this.coordinates_.getHeight()
                 );
                 break;
             case "RAIN":
+                int latitudeRain = safeAdd(this.coordinates_.getLatitude(), 5);
                 this.coordinates_ = new Coordinates(
                     this.coordinates_.getLongitude(),
-                    this.coordinates_.getLatitude() + 5,
+                    latitudeRain,
                     this.coordinates_.getHeight()
                 );
                 break;
             case "SUN":
+                int latitudeSun = safeAdd(this.coordinates_.getLatitude(), 10);
                 this.coordinates_ = new Coordinates(
                     this.coordinates_.getLongitude(),
-                    this.coordinates_.getLatitude() + 10,
+                    latitudeSun,
                     this.coordinates_.getHeight() + 2
                 );
                 break;

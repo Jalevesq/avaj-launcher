@@ -41,8 +41,9 @@ public class Baloon extends Aircraft implements Flyable {
                 );
                 break;
             case "SUN":
+                int longitude = safeAdd(this.coordinates_.getLongitude(), 2);
                 this.coordinates_ = new Coordinates(
-                    this.coordinates_.getLongitude() + 2,
+                    longitude,
                     this.coordinates_.getLatitude(),
                     this.coordinates_.getHeight() + 4
                 );

@@ -22,4 +22,11 @@ public class Aircraft {
         System.out.println(this.coordinates_);
     }
 
+    protected final int safeAdd(int left, int right) {
+        if (right > 0 ? left > Integer.MAX_VALUE - right
+                      : left < Integer.MIN_VALUE - right) {
+          return Integer.MAX_VALUE;
+        }
+        return left + right;
+      }
 }

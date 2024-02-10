@@ -41,18 +41,24 @@ public class ScenarioParser {
                     throw new IllegalArgumentException("Too many data line: " + line);
                 }
                 try {
+                    int longitude = Integer.parseInt(data[2]);
+                    int latitude = Integer.parseInt(data[3]);
+                    int height = Integer.parseInt(data[4]);
+                    
+                    if (longitude < 0 || latitude < 0 || height < 0) {
+                        throw new IllegalArgumentException("Coordinates and height must be positive integers: " + line);
+                    }
+            
                     Flyable flyable = AircraftFactory.newAircraft(
                         data[0], // type
                         data[1], // name
-                        Integer.parseInt(data[2]), // longitude
-                        Integer.parseInt(data[3]), // latitude
-                        Integer.parseInt(data[4])  // height
+                        longitude, // longitude
+                        latitude, // latitude
+                        height  // height
                     );
                     aircrafts.add(flyable);
                 } catch (NumberFormatException e) {
                     throw new IllegalArgumentException("Number format error in line: " + line, e);
-                } catch (IllegalArgumentException e) {
-                    throw new IllegalArgumentException(e.getMessage() + " line: " + line, e);
                 }
             }
 

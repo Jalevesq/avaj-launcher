@@ -34,22 +34,25 @@ public class Helicopter extends Aircraft implements Flyable{
         String currentWeather = weatherTower_.getWeather(this.coordinates_);
         switch (currentWeather) {
             case "FOG":
+                int longitudeFog = safeAdd(this.coordinates_.getLongitude(), 1);
                 this.coordinates_ = new Coordinates(
-                    this.coordinates_.getLongitude() + 1,
+                    longitudeFog,
                     this.coordinates_.getLatitude(),
                     this.coordinates_.getHeight()
                 );
                 break;
             case "RAIN":
+                int longitudeRain = safeAdd(this.coordinates_.getLongitude(), 5);
                 this.coordinates_ = new Coordinates(
-                    this.coordinates_.getLongitude() + 5,
+                    longitudeRain,
                     this.coordinates_.getLatitude(),
                     this.coordinates_.getHeight()
                 );
                 break;
             case "SUN":
+                int longitudeSun = safeAdd(this.coordinates_.getLongitude(), 10);
                 this.coordinates_ = new Coordinates(
-                    this.coordinates_.getLongitude() + 10,
+                    longitudeSun,
                     this.coordinates_.getLatitude(),
                     this.coordinates_.getHeight() + 2
                 );
