@@ -17,14 +17,6 @@ public class Aircraft {
         return idCounter_++;
     }
 
-    // public String getName() {
-    //     return this.name_;
-    // }
-
-    // public long getId() {
-    //     return this.id_;
-    // }
-
     public void printCoordinate() {
         System.out.println(this.coordinates_);
     }
