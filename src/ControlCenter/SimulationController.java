@@ -15,7 +15,7 @@ public class SimulationController {
         try {
             parser.parseFile(filePath);
         } catch (FileNotFoundException e) {
-            System.err.println("Error: File not found - " + e.getMessage());
+            System.out.println("Error: File not found - " + e.getMessage());
             System.exit(1);
         }
         this.simulationCount_ = parser.getSimulationCount();

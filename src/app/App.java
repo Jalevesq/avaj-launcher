@@ -7,7 +7,7 @@ public class App {
         try {
             simulation = new SimulationController("scenario.txt");
         } catch (IllegalArgumentException e) {
-            System.err.println("Error parsing file: " + e.getMessage());
+            System.out.println("Error parsing file: " + e.getMessage());
             System.exit(1);
         }
 
