@@ -3,8 +3,9 @@ package airvehicles;
 public class Aircraft {
     protected long id_;
     protected String name_;
+    protected String type_;
     protected Coordinates coordinates_;
-    private static long idCounter_ = 0;
+    private static long idCounter_ = 1;
     
     protected Aircraft(String name, Coordinates coordinates) {
         this.name_ = name;
@@ -16,13 +17,13 @@ public class Aircraft {
         return idCounter_++;
     }
 
-    public String getName() {
-        return this.name_;
-    }
+    // public String getName() {
+    //     return this.name_;
+    // }
 
-    public long getId() {
-        return this.id_;
-    }
+    // public long getId() {
+    //     return this.id_;
+    // }
 
     public void printCoordinate() {
         System.out.println(this.coordinates_);

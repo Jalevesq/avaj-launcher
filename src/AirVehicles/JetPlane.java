@@ -1,32 +1,30 @@
 package airvehicles;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import controlcenter.Flyable;
 import controlcenter.WeatherTower;
 
 public class JetPlane extends Aircraft implements Flyable {
-    private Set<WeatherTower> weatherTower_;
+    private WeatherTower weatherTower_;
 
     JetPlane(String name, Coordinates coordinates) {
         super(name, coordinates);
-        this.weatherTower_ = new HashSet<>();
+        this.type_ = "JetPlane";
     }
 
     @Override
     public String getFlyableInfo() {
-        return "JetPlane#" + this.getName() + "(" + this.getId() + ")";
+        return this.type_ + "#" + this.name_ + "(" + this.id_ + ")";
     }
 
     @Override
     public void updateConditions() {
-        
+        String currentWeather = weatherTower_.getWeather(this.coordinates_);
+        System.out.println(currentWeather);
     }
 
     @Override
     public void registerTower(WeatherTower weatherTower) {
-        this.weatherTower_.add(weatherTower);
+        this.weatherTower_ = weatherTower;
         weatherTower.register(this);
     }
 }
