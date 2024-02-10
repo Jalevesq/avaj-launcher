@@ -68,7 +68,7 @@ public class JetPlane extends Aircraft implements Flyable {
             }
     
             if (this.coordinates_.getHeight() <= 0) {
-                Logger.log(getFlyableInfo() + " landing.");
+                Logger.log(getFlyableInfo() + " landing at coordinate: " + coordinates_);
                 this.weatherTower_.unregister(this);
                 this.weatherTower_ = null;
             }
