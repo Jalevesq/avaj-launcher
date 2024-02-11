@@ -3,6 +3,7 @@ package avaj.app.io;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import avaj.airvehicles.AircraftFactory;
@@ -25,16 +26,8 @@ public class ScenarioParser {
             if (!scanner.hasNextLine()) {
                 throw new IllegalArgumentException("File is empty.");
             }
-            String firstLine = scanner.nextLine();
-            firstLine = firstLine.trim();
-            if (firstLine.isEmpty()) {
-                throw new IllegalArgumentException("First line is empty.");
-            }
-            simulationCount = Integer.parseInt(firstLine);
-            if (simulationCount < 0) {
-                throw new NumberFormatException("The first line is not a valid positive integer: " + firstLine);
-            }
-            
+            this.simulationCount = getFirstLine(scanner);
+
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] data = line.split(" ");
@@ -57,13 +50,21 @@ public class ScenarioParser {
     }
 
     private Flyable createAircraft(String[] data) {
-        int longitude = Integer.parseInt(data[2]);
-        int latitude = Integer.parseInt(data[3]);
-        int height = Integer.parseInt(data[4]);
-        
-        if (longitude < 0 || latitude < 0 || height < 0) {
-            throw new IllegalArgumentException("Coordinates and height must be positive integers.");
+        int height;
+        int latitude;
+        int longitude;
+        try {
+            longitude = Integer.parseInt(data[2]);
+            latitude = Integer.parseInt(data[3]);
+            height = Integer.parseInt(data[4]);
+            if (longitude < 0 || latitude < 0 || height < 0) {
+                throw new IllegalArgumentException();
+            }
+        } catch (IllegalArgumentException e) {
+            String arrayString = Arrays.toString(data);
+            throw new IllegalArgumentException("Coordinates and height must be positive integers. line: " + arrayString.substring(1, arrayString.length() - 1), e);
         }
+        
 
         Flyable flyable = AircraftFactory.newAircraft(
             data[0], // type
@@ -73,6 +74,24 @@ public class ScenarioParser {
             height  // height
         );
         return flyable;
+    }
+
+    private int getFirstLine(Scanner scanner) {
+            String firstLine = scanner.nextLine();
+            firstLine = firstLine.trim();
+            if (firstLine.isEmpty()) {
+                throw new IllegalArgumentException("First line is empty.");
+            }
+
+            try {
+                int simulationCount = Integer.parseInt(firstLine);
+                if (simulationCount < 0) {
+                    throw new NumberFormatException();
+                }
+                return simulationCount;
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("The first line is not a valid positive integer: " + firstLine, e);
+            }
     }
 
     public int getSimulationCount() {
