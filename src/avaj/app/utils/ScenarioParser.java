@@ -85,7 +85,7 @@ public class ScenarioParser {
             try {
                 int simulationCount = Integer.parseInt(firstLine);
                 if (simulationCount < 0) {
-                    throw new AvajException("The first line is not a valid positive integer: " + firstLine);
+                    throw new NumberFormatException();
                 }
                 return simulationCount;
             } catch (NumberFormatException e) {
