@@ -1,8 +1,9 @@
 package avaj.controlcenter;
 
 import java.util.List;
-// import app.io.Logger;
-import avaj.app.io.ScenarioParser;
+
+import avaj.app.utils.ScenarioParser;
+
 import java.io.FileNotFoundException;
 
 public class SimulationController {

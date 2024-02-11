@@ -2,7 +2,8 @@ package avaj.airvehicles;
 
 import java.util.HashMap;
 import java.util.Map;
-import avaj.app.io.Logger;
+
+import avaj.app.utils.Logger;
 import avaj.controlcenter.Flyable;
 import avaj.controlcenter.WeatherTower;
 

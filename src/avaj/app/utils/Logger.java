@@ -1,4 +1,4 @@
-package avaj.app.io;
+package avaj.app.utils;
 
 import java.io.File;
 import java.io.FileWriter;
