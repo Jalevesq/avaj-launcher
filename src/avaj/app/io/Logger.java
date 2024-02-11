@@ -15,7 +15,7 @@ public class Logger {
             outfileWriter = new BufferedWriter(new FileWriter(outfile));
             Runtime.getRuntime().addShutdownHook(new Thread(Logger::closeLog));
         } catch (IOException e) {
-            System.out.println("Error: Couldn't create simulation file.");
+            System.out.println("An error occurred while instantiating outfile: " + e.getMessage());
             System.exit(1);
         }
     }
@@ -26,7 +26,7 @@ public class Logger {
             outfileWriter.newLine();
             outfileWriter.flush();
         } catch (IOException e) {
-            System.out.println("Error: Couldn't write line in file: " + msg);
+            System.out.println("Error: Couldn't write line in file: " + e.getMessage());
             System.exit(1);
         }
     }
