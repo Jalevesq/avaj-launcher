@@ -5,21 +5,8 @@
             "name": "App",
             "request": "launch",
             "mainClass": "avaj.app.App",
-            "projectName": "avaj-launcher_429bc00"
+            "projectName": "avaj-launcher_429bc00",
+            "args": ["./src/scenario.txt"]
         },
-        {
-            "type": "java",
-            "name": "App",
-            "request": "launch",
-            "mainClass": "avaj.app.App",
-            "projectName": "avaj-launcher"
-        },
-        {
-            "type": "java",
-            "name": "App",
-            "request": "launch",
-            "mainClass": "App",
-            "projectName": "avaj-launcher"
-        }
     ]
 }

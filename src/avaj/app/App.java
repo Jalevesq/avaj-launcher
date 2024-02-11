@@ -8,7 +8,7 @@ public class App {
             System.out.println("Pass the file path as a unique argument.");
             return ;
         }
-        simulation = new SimulationController("scenario.txt");
+        simulation = new SimulationController(args[0]);
         simulation.startSimulation();
         System.out.println("Simulation done !");
     }
