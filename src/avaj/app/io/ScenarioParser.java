@@ -26,14 +26,11 @@ public class ScenarioParser {
                 throw new IllegalArgumentException("File is empty.");
             }
             String firstLine = scanner.nextLine();
-            try {
-                simulationCount = Integer.parseInt(firstLine.trim());
-                if (simulationCount < 0)
-                    throw new NumberFormatException();
-            } catch (NumberFormatException e) {
-                throw new IllegalArgumentException("The first line is not a valid positive integer: " + firstLine, e);
+            simulationCount = Integer.parseInt(firstLine.trim());
+            if (simulationCount < 0) {
+                throw new NumberFormatException("The first line is not a valid positive integer: " + firstLine);
             }
-
+            
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] data = line.split(" ");
@@ -42,16 +39,9 @@ public class ScenarioParser {
                 } else if (data.length > 5) {
                     throw new IllegalArgumentException("Too many data line: " + line);
                 }
-                try {
-                    Flyable flyable = this.createAircraft(data);
-                    aircrafts.add(flyable);
-                } catch (NumberFormatException e) {
-                    throw new IllegalArgumentException("Number format error in line: " + line, e);
-                } catch (IllegalArgumentException e) {
-                    throw new IllegalArgumentException(e.getMessage() + " line: " + line);
-                }
+                Flyable flyable = this.createAircraft(data);
+                aircrafts.add(flyable);
             }
-
             if (this.aircrafts.size() <= 0) {
                 throw new IllegalArgumentException("The scenario need at least one flyable.");
             }

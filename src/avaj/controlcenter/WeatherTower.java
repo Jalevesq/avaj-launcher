@@ -8,7 +8,6 @@ public class WeatherTower extends Tower {
     }
 
     void changeWeather() {
-        // Implement logic about changing it randomly and update all observer.
         this.conditionsChanged();
     }
 }
