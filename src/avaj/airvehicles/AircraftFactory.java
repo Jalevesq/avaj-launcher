@@ -25,6 +25,8 @@ public class AircraftFactory {
         if (constructor != null) {
             if (height <= 0) {
                 throw new AvajException("An aircraft cannot start with an height lower than 1.");
+            } else if (name.length() > 50) {
+                throw new AvajException("Flyable name can't be longer than 50 characters.");
             }
             Coordinates coordinates = new Coordinates(longitude, latitude, height);
             return constructor.apply(name, coordinates);
