@@ -3,6 +3,7 @@ package avaj.controlcenter;
 import java.util.HashSet;
 import java.util.Set;
 
+import avaj.airvehicles.Flyable;
 import avaj.app.utils.Logger;
 
 public class Tower {

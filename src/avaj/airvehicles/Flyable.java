@@ -1,4 +1,6 @@
-package avaj.controlcenter;
+package avaj.airvehicles;
+
+import avaj.controlcenter.WeatherTower;
 
 public interface Flyable {
 

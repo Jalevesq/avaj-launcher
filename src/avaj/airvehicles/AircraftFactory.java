@@ -5,7 +5,6 @@ import java.util.Map;
 import java.util.function.BiFunction;
 
 import avaj.app.utils.AvajException;
-import avaj.controlcenter.Flyable;
 
 
 public class AircraftFactory {

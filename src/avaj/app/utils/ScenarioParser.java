@@ -7,7 +7,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 import avaj.airvehicles.AircraftFactory;
-import avaj.controlcenter.Flyable;
+import avaj.airvehicles.Flyable;
 
 public class ScenarioParser {
 

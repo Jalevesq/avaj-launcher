@@ -2,6 +2,7 @@ package avaj.controlcenter;
 
 import java.util.List;
 
+import avaj.airvehicles.Flyable;
 import avaj.app.utils.AvajException;
 import avaj.app.utils.ScenarioParser;
 
