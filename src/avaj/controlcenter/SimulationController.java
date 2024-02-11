@@ -2,6 +2,7 @@ package avaj.controlcenter;
 
 import java.util.List;
 
+import avaj.app.utils.AvajException;
 import avaj.app.utils.ScenarioParser;
 
 import java.io.FileNotFoundException;
@@ -18,7 +19,10 @@ public class SimulationController {
         } catch (FileNotFoundException e) {
             System.out.println("Error: File not found - " + e.getMessage());
             System.exit(1);
-        }
+        } catch (AvajException e) {
+            System.out.println("Error parsing file: " + e.getMessage());
+            System.exit(1);
+        } 
         this.simulationCount_ = parser.getSimulationCount();
         this.aircraftDataList_ = parser.getAircrafts();
         weathertower_ = new WeatherTower();

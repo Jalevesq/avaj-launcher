@@ -2,18 +2,13 @@ package avaj.app;
 import avaj.controlcenter.SimulationController;
 
 public class App {
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         SimulationController simulation = null;
-        try {
-            if (args.length != 1) {
-                throw new IllegalArgumentException("Pass the file path as a unique argument.");
-            }
-            simulation = new SimulationController("scenario.txt");
-        } catch (IllegalArgumentException e) {
-            System.out.println("Error parsing file: " + e.getMessage());
-            System.exit(1);
+        if (args.length != 1) {
+            System.out.println("Pass the file path as a unique argument.");
+            return ;
         }
-
+        simulation = new SimulationController("scenario.txt");
         simulation.startSimulation();
         System.out.println("Simulation done !");
     }

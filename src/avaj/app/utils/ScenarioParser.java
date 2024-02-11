@@ -19,12 +19,12 @@ public class ScenarioParser {
         this.simulationCount = 0;
     }
 
-    public void parseFile(String filePath) throws FileNotFoundException, IllegalArgumentException {
+    public void parseFile(String filePath) throws FileNotFoundException, AvajException {
         Scanner scanner = new Scanner(new File(filePath));
-        
+
         try {
             if (!scanner.hasNextLine()) {
-                throw new IllegalArgumentException("File is empty.");
+                throw new AvajException("File is empty.");
             }
             this.simulationCount = getFirstLine(scanner);
 
@@ -34,22 +34,22 @@ public class ScenarioParser {
                 if (data.length == 1 && line.length() == 0) // Ignore empty line
                     continue;
                 if (data.length < 5) {
-                    throw new IllegalArgumentException("Incomplete data line: " + line);
+                    throw new AvajException("Incomplete data line: " + line);
                 } else if (data.length > 5) {
-                    throw new IllegalArgumentException("Too many data line: " + line);
+                    throw new AvajException("Too many data line: " + line);
                 }
                 Flyable flyable = this.createAircraft(data);
                 aircrafts.add(flyable);
             }
             if (this.aircrafts.size() <= 0) {
-                throw new IllegalArgumentException("The scenario need at least one flyable.");
+                throw new AvajException("The scenario need at least one flyable.");
             }
         } finally {
             scanner.close();
         }
     }
 
-    private Flyable createAircraft(String[] data) {
+    private Flyable createAircraft(String[] data) throws AvajException {
         int height;
         int latitude;
         int longitude;
@@ -58,14 +58,13 @@ public class ScenarioParser {
             latitude = Integer.parseInt(data[3]);
             height = Integer.parseInt(data[4]);
             if (longitude < 0 || latitude < 0 || height < 0) {
-                throw new IllegalArgumentException();
+                throw new NumberFormatException();
             }
-        } catch (IllegalArgumentException e) {
+        } catch (NumberFormatException e) {
             String arrayString = Arrays.toString(data);
-            throw new IllegalArgumentException("Coordinates and height must be positive integers. line: " + arrayString.substring(1, arrayString.length() - 1), e);
+            throw new AvajException("Coordinates and height must be a valid positive integers. line: " + arrayString.substring(1, arrayString.length() - 1));
         }
-        
-
+    
         Flyable flyable = AircraftFactory.newAircraft(
             data[0], // type
             data[1], // name
@@ -76,21 +75,21 @@ public class ScenarioParser {
         return flyable;
     }
 
-    private int getFirstLine(Scanner scanner) {
+    private int getFirstLine(Scanner scanner) throws AvajException {
             String firstLine = scanner.nextLine();
             firstLine = firstLine.trim();
             if (firstLine.isEmpty()) {
-                throw new IllegalArgumentException("First line is empty.");
+                throw new AvajException("First line is empty.");
             }
 
             try {
                 int simulationCount = Integer.parseInt(firstLine);
                 if (simulationCount < 0) {
-                    throw new NumberFormatException();
+                    throw new AvajException("The first line is not a valid positive integer: " + firstLine);
                 }
                 return simulationCount;
             } catch (NumberFormatException e) {
-                throw new IllegalArgumentException("The first line is not a valid positive integer: " + firstLine, e);
+                throw new AvajException("First line is not a valid positive integer: " + firstLine);
             }
     }
 
