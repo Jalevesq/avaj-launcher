@@ -68,9 +68,9 @@ public class ScenarioParser {
         Flyable flyable = AircraftFactory.newAircraft(
             data[0], // type
             data[1], // name
-            longitude, // longitude
-            latitude, // latitude
-            height  // height
+            longitude,
+            latitude,
+            height
         );
         return flyable;
     }
