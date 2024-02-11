@@ -26,7 +26,11 @@ public class ScenarioParser {
                 throw new IllegalArgumentException("File is empty.");
             }
             String firstLine = scanner.nextLine();
-            simulationCount = Integer.parseInt(firstLine.trim());
+            firstLine = firstLine.trim();
+            if (firstLine.isEmpty()) {
+                throw new IllegalArgumentException("First line is empty.");
+            }
+            simulationCount = Integer.parseInt(firstLine);
             if (simulationCount < 0) {
                 throw new NumberFormatException("The first line is not a valid positive integer: " + firstLine);
             }
@@ -34,6 +38,8 @@ public class ScenarioParser {
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
                 String[] data = line.split(" ");
+                if (data.length == 1 && line.length() == 0) // Ignore empty line
+                    continue;
                 if (data.length < 5) {
                     throw new IllegalArgumentException("Incomplete data line: " + line);
                 } else if (data.length > 5) {
