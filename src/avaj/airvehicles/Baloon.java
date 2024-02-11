@@ -17,7 +17,7 @@ public class Baloon extends Aircraft implements Flyable {
         baloonInfo_.put("SNOW", "It's a winter wonderland up here. Too bad I can't make snow angels.");
     }
 
-    public Baloon(String name, Coordinates coordinates) {
+    Baloon(String name, Coordinates coordinates) {
         super(name, coordinates);
         this.type_ = "Baloon";
     }

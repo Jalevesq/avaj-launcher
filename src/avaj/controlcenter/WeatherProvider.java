@@ -3,18 +3,16 @@ package avaj.controlcenter;
 import avaj.airvehicles.Coordinates;
 
 public class WeatherProvider {
-    private static WeatherProvider providerInstance_ = null;
+    private static WeatherProvider weatherProvider_ = null;
     private String[] weather_ = {"RAIN", "FOG", "SNOW", "SUN"};
 
     private WeatherProvider() {}
 
     public static WeatherProvider getProvider() {
-        if (providerInstance_ == null) {
-            if (providerInstance_ == null) {
-                providerInstance_ = new WeatherProvider();
-            }
+        if (weatherProvider_ == null) {
+            weatherProvider_ = new WeatherProvider();
         }
-        return providerInstance_;
+        return weatherProvider_;
     }
 
     public String getCurrentWeather(Coordinates coordinates) {
